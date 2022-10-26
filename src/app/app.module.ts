@@ -17,6 +17,7 @@ import { UserStatComponent } from './backOffice/user-stat/user-stat.component';
 import { EventStatComponent } from './backOffice/event-stat/event-stat.component';
 import { TicketStatComponent } from './backOffice/ticket-stat/ticket-stat.component';
 import { PubStatComponent } from './backOffice/pub-stat/pub-stat.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PubStatComponent } from './backOffice/pub-stat/pub-stat.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

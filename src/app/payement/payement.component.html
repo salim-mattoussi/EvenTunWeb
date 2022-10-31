@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="container">
     <div class="row m-0">
         <div class="col-lg-7 pb-5 pe-lg-5">
@@ -94,13 +95,13 @@
                                     <p class="text-muted">Cardholder name</p>
                                     <input class="form-control" type="text" name="cardName"  [(ngModel)]="pay.cardName" #n="ngModel"
                                         placeholder="Name" required>
-                                        <div *ngIf=" n.touched">
+                                        <div *ngIf=" n.touched && n.invalid">
                                             <p *ngIf="n.hasError('required')"   id="RQ"> required</p></div>
                                 </span>
                                 <div class="w-100 d-flex flex-column align-items-end">
                                     <p class="text-muted">CVC</p>
                                     <input class="form-control3" type="text" name="CVC" placeholder="XXX" required  [(ngModel)]="pay.CVC" #k="ngModel">
-                                    <div *ngIf=" k.touched">
+                                    <div *ngIf=" k.touched && k.invalid">
                                         <p *ngIf="k.hasError('required')"   id="RQ"> required</p></div>
                                 </div>
                             </div>
@@ -109,12 +110,17 @@
                     </div>
                     <div class="row m-0">
                         <div class="col-12  mb-4 p-0">
-                            <div class="btn btn-primary">Purchase<span class="fas fa-arrow-right ps-2" (click)="send()"></span>
-                            </div>
+                            <button class="btn btn-primary " (click)="send()"[disabled]="f.invalid">Purchase<span class="fas fa-arrow-right ps-2" routerLink="/ticket"></span></button>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="pt-5">
+        <h6 class="mb-0"><a routerLink="/pannier" class="text-body"><i
+              class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
+      </div>
 </div>
+<app-footer></app-footer>

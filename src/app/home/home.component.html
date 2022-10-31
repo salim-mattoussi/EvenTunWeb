@@ -1,15 +1,17 @@
 
+<app-navbar></app-navbar>
+
 
 
 <!-- Hero Section Begin -->
-<section class="hero-section set-bg" data-setbg="assets/img/hero.jpg">
+<section class="hero-section set-bg" [ngStyle]="{'background' : 'url(./assets/img/hero.jpg)'}" >
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
                 <div class="hero-text">
                     <span>1 to 5 Décembre 2019, Mouradi Hotel, Hamamet</span>
                     <h2>Change Your Mind<br /> To Become Sucess</h2>
-                    <a href="#" class="primary-btn">Acheter Ticket</a>
+                    <a routerLink="/pay" class="primary-btn">Acheter Ticket</a>
                 </div>
             </div>
             <div class="col-lg-5">
@@ -1036,3 +1038,5 @@
     </div>
 </section>
 <!-- Contact Section End -->
+
+<app-footer></app-footer>

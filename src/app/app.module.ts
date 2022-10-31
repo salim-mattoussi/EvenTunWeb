@@ -18,6 +18,8 @@ import { EventStatComponent } from './backOffice/event-stat/event-stat.component
 import { TicketStatComponent } from './backOffice/ticket-stat/ticket-stat.component';
 import { PubStatComponent } from './backOffice/pub-stat/pub-stat.component';
 import { FormsModule } from '@angular/forms';
+import { QRCodeModule } from 'angular2-qrcode';
+import { TicketsComponent } from './tickets/tickets.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +37,15 @@ import { FormsModule } from '@angular/forms';
     UserStatComponent,
     EventStatComponent,
     TicketStatComponent,
-    PubStatComponent
+    PubStatComponent,
+    TicketsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

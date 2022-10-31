@@ -20,6 +20,7 @@ import { PubStatComponent } from './backOffice/pub-stat/pub-stat.component';
 import { FormsModule } from '@angular/forms';
 import { QRCodeModule } from 'angular2-qrcode';
 import { TicketsComponent } from './tickets/tickets.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { TicketsComponent } from './tickets/tickets.component';
     TicketStatComponent,
     PubStatComponent,
     TicketsComponent,
+    BlogComponent,
     
   ],
   imports: [

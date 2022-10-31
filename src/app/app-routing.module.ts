@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashbordComponent } from './backOffice/dashbord/dashbord.component';
+import { BlogComponent } from './blog/blog.component';
 
 import { ContactComponent } from './contact/contact.component';
 import { EvenementComponent } from './evenement/evenement.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path :"admin", component: DashbordComponent},
   {path :"pay", component: PayementComponent},
   {path: "pannier" , component: PannierComponent},
-  {path: "ticket", component: TicketsComponent}
+  {path: "ticket", component: TicketsComponent},
+  {path : "blog", component : BlogComponent}
 
 ];
 

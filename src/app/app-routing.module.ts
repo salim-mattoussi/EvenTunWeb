@@ -10,11 +10,13 @@ import { LoginComponent } from './login/login.component';
 import { PannierComponent } from './pannier/pannier.component';
 import { PayementComponent } from './payement/payement.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import {SignupComponent} from "./signup/signup.component";
 
 const routes: Routes = [
   {path :"" , component :HomeComponent},
   {path :"home" , component :HomeComponent},
   {path :"evenement", component: EvenementComponent},
+  {path :"singup", component: SignupComponent},
   {path : "contact", component : ContactComponent},
   {path : "login" , component : LoginComponent},
   {path :"admin", component: DashbordComponent},

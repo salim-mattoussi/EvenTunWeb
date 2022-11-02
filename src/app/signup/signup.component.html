@@ -1,1 +1,125 @@
-<p>signup works!</p>
+<section class="vh-150 bg-image"
+  style="background-image: url('https://www.festilyrique.fr/wp-content/uploads/2020/06/danny-howe-bn-D2bCvpik-unsplash-1024x683.jpg');">
+  <div class="  gradient-custom-3">
+    <div class="container py-5 h-70">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form >
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+              
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input type="text" matInput [formControl]="firstnameFormControl" >
+                    <mat-error *ngIf="firstnameFormControl.hasError('required')">
+                      First Name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div></div>
+                <div class="col-md-6 mb-4 pb-2">
+                <div class="form-outline">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input type="text" matInput [formControl]="lastnameFormControl" >
+                    <mat-error *ngIf="lastnameFormControl.hasError('required')">
+                      Last Name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+                  
+                <div class="form-outline">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Telephone</mat-label>
+                    <input type="number" matInput [formControl]="telephoneFormControl" >
+                    <mat-error *ngIf="telephoneFormControl.hasError('required')">
+                      telephone is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div></div>
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex.pat@example.com" >
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div></div></div>
+
+                <div class="form-outline ">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput [formControl]="passwordFormControl" [type]="showPassword ? 'text' : 'password'"  name="password" >
+                    <mat-icon matSuffix (click)="togglePasswordVisibility()">
+                        {{showPassword?'visibility_off':'visibility'}}
+                    </mat-icon>
+                 
+                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                      Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Repeat your Password</mat-label>
+                    <input matInput [formControl]="passwordFormControl1" [type]="showPassword1 ? 'text' : 'password'"  name="password"   >
+                    <mat-icon matSuffix (click)="toggleRepeatPasswordVisibility()">
+                        {{showPassword?'visibility_off':'visibility'}}
+                    </mat-icon>
+                 
+                    <mat-error *ngIf="passwordFormControl1.hasError('required')">
+                      Repeat Password is  <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="passwordFormControl1.hasError('matching')">
+                      Password<strong> must match </strong>
+                     </mat-error>
+                </mat-form-field>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+                  
+                <div class="form-outline">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Role (required)</mat-label>
+                    <select matNativeControl required [formControl]="selectFormControl">
+                      <option label="--choose your role --"></option>
+                      <option value="user">user</option>
+                      <option value="event manager">event manager</option>
+                      <option value="blog manager">blog manager</option>
+                    </select>
+                    <mat-error *ngIf="selectFormControl.hasError('required')">
+                      role is required
+                    </mat-error>
+                   
+                  </mat-form-field>
+</div></div></div>
+                <div class="d-flex justify-content-center">
+                  <button type="button"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" >Register</button>
+                </div>
+          
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a routerLink="/login"
+                    class="fw-bold text-body" ><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

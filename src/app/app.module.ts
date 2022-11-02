@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatListModule} from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -17,10 +17,15 @@ import { UserStatComponent } from './backOffice/user-stat/user-stat.component';
 import { EventStatComponent } from './backOffice/event-stat/event-stat.component';
 import { TicketStatComponent } from './backOffice/ticket-stat/ticket-stat.component';
 import { PubStatComponent } from './backOffice/pub-stat/pub-stat.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { QRCodeModule } from 'angular2-qrcode';
 import { TicketsComponent } from './tickets/tickets.component';
 import { BlogComponent } from './blog/blog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -41,13 +46,21 @@ import { BlogComponent } from './blog/blog.component';
     PubStatComponent,
     TicketsComponent,
     BlogComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    QRCodeModule
+    QRCodeModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatListModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

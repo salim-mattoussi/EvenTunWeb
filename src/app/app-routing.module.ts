@@ -1,15 +1,16 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashbordComponent } from './backOffice/dashbord/dashbord.component';
-import { BlogComponent } from './blog/blog.component';
 
-import { ContactComponent } from './contact/contact.component';
-import { EvenementComponent } from './evenement/evenement.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { PannierComponent } from './pannier/pannier.component';
-import { PayementComponent } from './payement/payement.component';
-import { TicketsComponent } from './tickets/tickets.component';
+
+import { BlogComponent } from './components/blog/blog.component';
+
+import { ContactComponent } from './components/contact/contact.component';
+import { EvenementComponent } from './components/evenement/evenement.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { PannierComponent } from './components/pannier/pannier.component';
+import { PayementComponent } from './components/payement/payement.component';
+import { TicketsComponent } from './components/tickets/tickets.component';
 
 const routes: Routes = [
   {path :"" , component :HomeComponent},
@@ -17,11 +18,12 @@ const routes: Routes = [
   {path :"evenement", component: EvenementComponent},
   {path : "contact", component : ContactComponent},
   {path : "login" , component : LoginComponent},
-  {path :"admin", component: DashbordComponent},
+  {path:"admin",loadChildren:()=> import('./modules/admin/admin.module').then((m)=>m.AdminModule)},
   {path :"pay", component: PayementComponent},
   {path: "pannier" , component: PannierComponent},
   {path: "ticket", component: TicketsComponent},
-  {path : "blog", component : BlogComponent}
+  {path : "blog", component : BlogComponent},
+ 
 
 ];
 

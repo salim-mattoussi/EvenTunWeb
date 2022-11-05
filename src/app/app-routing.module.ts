@@ -11,6 +11,9 @@ import { PannierComponent } from './pannier/pannier.component';
 import { PayementComponent } from './payement/payement.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import {SignupComponent} from "./signup/signup.component";
+import { ProfilComponent } from './profil/profil.component';
+import { RestpasswordComponent } from './restpassword/restpassword.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {path :"" , component :HomeComponent},
@@ -23,7 +26,10 @@ const routes: Routes = [
   {path :"pay", component: PayementComponent},
   {path: "pannier" , component: PannierComponent},
   {path: "ticket", component: TicketsComponent},
-  {path : "blog", component : BlogComponent}
+  {path : "blog", component : BlogComponent},
+  { path : "profil", component : ProfilComponent},
+  { path : "restpassword", component : RestpasswordComponent},
+  { path : "test", component : TestComponent}
 
 ];
 

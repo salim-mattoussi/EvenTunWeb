@@ -26,6 +26,10 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import { ProfilComponent } from './profil/profil.component';
+import { RestpasswordComponent } from './restpassword/restpassword.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { TestComponent } from './test/test.component'; 
 
 @NgModule({
   declarations: [
@@ -46,6 +50,9 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     PubStatComponent,
     TicketsComponent,
     BlogComponent,
+    ProfilComponent,
+    RestpasswordComponent,
+    TestComponent,
 
   ],
   imports: [
@@ -60,6 +67,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     MatIconModule,
     MatFormFieldModule,
     MatListModule,
+    MatStepperModule,
     
   ],
   providers: [],

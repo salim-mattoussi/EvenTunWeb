@@ -1,5 +1,6 @@
 export class user{
     iduser : Number;
+ 
     login:String;
     firstname : String;
     lastname : String;
@@ -7,4 +8,5 @@ export class user{
     email:String;
     pwd:String;
     role : String;
+    photo:String;
 }

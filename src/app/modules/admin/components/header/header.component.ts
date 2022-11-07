@@ -1,4 +1,6 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { datareclamation } from '../sidebar/nav-data';
+import { notifications, userItem } from './header-data';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +13,10 @@ export class HeaderComponent implements OnInit {
   @Input() screenWidth =0;
 
   canShowSearhAsOverlay = false;
+
+  notification = notifications;
+  userItem = userItem;
+  datarec = datareclamation;
   constructor() { }
 
   @HostListener('window:resize',['$event'])

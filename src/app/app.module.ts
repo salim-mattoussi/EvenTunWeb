@@ -18,6 +18,8 @@ import { QRCodeModule } from 'angular2-qrcode';
 import { TicketsComponent } from './components/tickets/tickets.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OverlayModule } from '@angular/cdk/overlay';
+
 
 
 
@@ -47,7 +49,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     FormsModule,
     QRCodeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    OverlayModule,
+    
     
    
    

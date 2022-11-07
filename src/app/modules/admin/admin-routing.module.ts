@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from 'src/app/components/login/login.component';
+import { SignupComponent } from 'src/app/components/signup/signup.component';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EvenementComponent } from './components/evenement-stat/evenement.component';
@@ -19,6 +21,8 @@ const routes: Routes = [
     {path:"user" ,component: UserStatComponent},
     {path:"event" ,component: EvenementComponent},
     {path:"publicite" ,component: PubStatComponent},
+    {path:"login", component: LoginComponent},
+    {path:"reclamationData",component:SignupComponent}
     //{path:"" ,redirectTo:"/admin/home",pathMatch:"full"},
   ]}
 ];

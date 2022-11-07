@@ -32,5 +32,12 @@ export const navbarData=[
     label:'publicite'
 },
 
+
 ];
+
+ export const datareclamation=[
+    {
+        routLink:"reclamationData",
+    }
+ ]
 

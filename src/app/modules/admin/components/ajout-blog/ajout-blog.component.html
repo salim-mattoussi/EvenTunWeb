@@ -1,0 +1,75 @@
+
+
+<form #f="ngForm">
+  <div class="register-photo" >
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form method="post">
+                <h2 class="text-center"><strong>Ajout</strong> Blog .</h2>
+
+                <div class="form-group">
+                  <select class="form-control"  list="browsers" name="browser" id="browser"  placeholder="category" 
+                  [(ngModel)]="blog.category" #c="ngModel"  required  >
+                  <option value="Sportif">Sportif</option>
+                  <option value="Culturel">Culturel</option>
+                  <option value="Musical">Musical</option>
+                  <option value="Autres">Autres</option>
+                  </select>
+               </div>
+               <div class="alert alert-danger" *ngIf="c.invalid && c.touched">
+                <p *ngIf="c.hasError('required')" >category is required</p>
+              </div>
+  
+                <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Titre de blog "
+                  [(ngModel)]="blog.title" #t="ngModel"  required minlength="4" ></div>
+                  <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
+                    <p *ngIf="t.hasError('required')" >titla is required</p>
+                    <p *ngIf="t.hasError('minlength')"> minlength error</p>
+                  </div>
+ 
+                  <div class="form-group"><textarea class="form-control"  name="description" placeholder="ecrire blog"
+                    [(ngModel)]="blog.article" #d="ngModel"  required minlength="5"  ></textarea></div>
+                    <div class="alert alert-danger" *ngIf="d.invalid && d.touched">
+                      <p *ngIf="d.hasError('required')" >decription is required</p>
+                      <p *ngIf="d.hasError('minlength')"> minlength error</p>
+                    </div>
+
+
+  
+                  <div class="form-group">
+                    <input class="form-control" type="date" name="date" placeholder="Date"
+                    [(ngModel)]="blog.date" #da="ngModel" required  ></div>
+                  <div class="alert alert-danger" *ngIf="d.invalid && d.touched">
+                    <p *ngIf="da.hasError('required')" >Date is required! Please enter a valid Date</p>
+                  </div>
+
+
+                  <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="ajouter des images"
+                    [(ngModel)]="blog.file"  #im="ngModel"  required minlength="4"></div>
+                  <div class="alert alert-danger" *ngIf="im.invalid && im.touched">
+                    <p *ngIf="im.hasError('required')" >url is required</p>
+                   
+                  </div>
+                  <!--uploed image ou video-->
+                  <img [src]="url" *ngIf="format==='image' && url" height="200"> <br/>
+                  <video [src]="url" *ngIf="format==='video' && url" height="200" controls></video> <br/>
+                  <div class="form-group"><input class="form-control" type="file" name="image" placeholder="image"
+                      (change)="onSelectFile($event)" ></div>
+                
+  
+                 
+                  
+                  <div class="form-group">
+                    <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">I agree to the license terms.</label></div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-block" type="submit" (click)="save()" [disabled]="f.invalid" >Ajouter</button>
+                </div>
+                <!-- <a href="#" class="already">You already have an account? Login here.</a> -->
+              </form>
+        </div>
+    </div>
+  </form>
+
+

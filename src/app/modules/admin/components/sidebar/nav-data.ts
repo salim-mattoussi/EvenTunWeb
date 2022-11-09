@@ -17,7 +17,7 @@ export const navbarData=[
     label:'event'
 },
 {
-    routeLink:'blog',
+    routeLink:'listblog',
     icon:'fa fa-comments-o',
     label:'blog'
 },
@@ -27,7 +27,7 @@ export const navbarData=[
     label:'tickets'
 },
 {
-    routeLink:'publicite',
+    routeLink:'listepub',
     icon:'fal fa-bullhorn',
     label:'publicite'
 },

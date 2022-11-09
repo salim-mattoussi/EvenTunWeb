@@ -13,12 +13,14 @@ import { ContactComponent } from './components/contact/contact.component';
 import { PayementComponent } from './components/payement/payement.component';
 import { PannierComponent } from './components/pannier/pannier.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QRCodeModule } from 'angular2-qrcode';
 import { TicketsComponent } from './components/tickets/tickets.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { DetailblogComponent } from './components/detailblog/detailblog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -40,6 +42,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
    
     TicketsComponent,
     BlogComponent,
+    DetailblogComponent,
     
     
     
@@ -51,6 +54,8 @@ import { OverlayModule } from '@angular/cdk/overlay';
     QRCodeModule,
     BrowserAnimationsModule,
     OverlayModule,
+    HttpClientModule,
+    ReactiveFormsModule
     
     
    

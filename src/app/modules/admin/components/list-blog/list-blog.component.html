@@ -1,0 +1,121 @@
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css /> -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <a href="ajoutblog" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i> Add New</a>
+                            <form class="form-horizontal pull-right">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Id</th>
+                                <th>Category</th>
+                                <th>Title</th>
+                                <th>article</th>
+                                <th>date</th>
+                                <th>media</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>22</td>
+                                <td>gg</td>
+                                <td>Vincent Williamson</td>
+                                <td> kdfc_yèswkdufèiqçd ,fuqyf</td>
+                                <td>31koiuiu</td>
+                                <td>jhgfuytè</td>
+                                <td>
+                                    <ul class="action-list">
+                                        <li><a href="#" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                        <li><a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>22</td>
+                                <td>gg</td>
+                                <td>Vincent Williamson</td>
+                                <td>31koiuiu</td>
+                                <td>31koiuiu</td>
+                                <td>jhgfuytè</td>
+                                <td>
+                                    <ul class="action-list">
+                                        <li><a href="#" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                        <li><a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>22</td>
+                                <td>gg</td>
+                                <td>Vincent Williamson</td>
+                                <td>31koiuiu</td>
+                                <td>31koiuiu</td>
+                                <td>jhgfuytè</td>
+                                <td>
+                                    <ul class="action-list">
+                                        <li><a href="#" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                        <li><a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr *ngFor="let blog of list">
+                                    <td>{{blog.id}}</td>
+                                    <td>{{blog.category}}</td>
+                                    <td>{{blog.title}}</td>
+                                    <td>{{blog.article}}</td>
+                                    <td>{{blog.date}}</td>
+                                    <td>{{blog.file}}</td>
+                                <td>
+                                    <ul class="action-list">
+                                        <li><a href="#" class="btn btn-primary" [routerLink]="['/update',blog.id]"><i class="fa fa-pencil-alt"></i></a></li>
+                                        <li><a href="#" class="btn btn-danger"  (click)="deleteBlog(blog)"><i class="fa fa-times"></i></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6  hidden-xs pull-right">
+                            <div class="container mt-3">
+                                <ul class="pagination">
+                                  <li class="page-item"><a class="page-link" href="#"><<</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">>></a></li>
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

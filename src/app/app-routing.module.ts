@@ -11,6 +11,11 @@ import { LoginComponent } from './components/login/login.component';
 import { PannierComponent } from './components/pannier/pannier.component';
 import { PayementComponent } from './components/payement/payement.component';
 import { TicketsComponent } from './components/tickets/tickets.component';
+import { DetailblogComponent } from './components/detailblog/detailblog.component';
+import { ListBlogComponent } from './modules/admin/components/list-blog/list-blog.component';
+import { ListPubliciteComponent } from './modules/admin/components/list-publicite/list-publicite.component';
+import { AjoutBlogComponent } from './modules/admin/components/ajout-blog/ajout-blog.component';
+import { AjoutPubliciteComponent } from './modules/admin/components/ajout-publicite/ajout-publicite.component';
 
 const routes: Routes = [
   {path :"" , component :HomeComponent},
@@ -23,7 +28,11 @@ const routes: Routes = [
   {path: "pannier" , component: PannierComponent},
   {path: "ticket", component: TicketsComponent},
   {path : "blog", component : BlogComponent},
- 
+  {path:"detailblog",component: DetailblogComponent},
+  {path : "listpub", component : ListPubliciteComponent},
+  {path : "listblog", component : ListBlogComponent},
+  {path:"ajoutblog", component :AjoutBlogComponent},
+  {path:"ajoupub", component :AjoutPubliciteComponent}
 
 ];
 
